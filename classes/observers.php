@@ -28,7 +28,7 @@ require_once($CFG->dirroot . '/mod/forum/lib.php');
 
 class observers {
     public static function course_created(\core\event\course_created $event) {
-        if(empty($event->objectid)) {
+        if (empty($event->objectid)) {
             return;
         }
         forum_get_course_forum($event->objectid, 'news');
