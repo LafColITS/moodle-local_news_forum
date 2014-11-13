@@ -16,7 +16,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = '2014110300';
+$plugin->version   = 2014110300;
+$plugin->requires  = 2013111800;
 $plugin->cron      = 0;
 $plugin->component = 'local_news_forum';
-$plugin->maturity  = MATURITY_ALPHA;
+$plugin->maturity  = MATURITY_STABLE;
+$plugin->release   = 'v1.0.0';
