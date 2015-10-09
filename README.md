@@ -1,6 +1,8 @@
 Moodle News Forum Creation
 ==========================
 
+[![Build Status](https://api.travis-ci.org/LafColITS/moodle-local_news_forum.png)](https://api.travis-ci.org/LafColITS/moodle-local_news_forum)
+
 News Forum creates a news forum on course creation. This eliminates the requirement to have the latest news block installed in order to create the forum. This issue is fully described in [MDL-26707](https://tracker.moodle.org/browse/MDL-26707).
 
 Requirements
