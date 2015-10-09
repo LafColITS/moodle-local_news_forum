@@ -1,15 +1,17 @@
+sudo: false
 language: php
 php:
   - "5.4"
 env:
- - DB=mysqli MOODLE_VERSION=MOODLE_28_STABLE
- - DB=mysqli MOODLE_VERSION=master
- - DB=pgsql MOODLE_VERSION=MOODLE_28_STABLE
- - DB=pgsql MOODLE_VERSION=master
+  - DB=mysqli MOODLE_VERSION=MOODLE_28_STABLE
+  - DB=mysqli MOODLE_VERSION=MOODLE_29_STABLE
+  - DB=mysqli MOODLE_VERSION=master
+  - DB=pgsql MOODLE_VERSION=MOODLE_28_STABLE
+  - DB=pgsql MOODLE_VERSION=MOODLE_29_STABLE
+  - DB=pgsql MOODLE_VERSION=master
 before_script:
   - git clone git://github.com/moodle/moodle ../moodle && cd ../moodle
   - git checkout $MOODLE_VERSION
-  - sudo apt-get update > /dev/null
   - composer self-update
   - composer install --dev --prefer-dist
   - mv ../moodle-local_news_forum local/news_forum
